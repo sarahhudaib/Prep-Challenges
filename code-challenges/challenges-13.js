@@ -38,12 +38,13 @@
 // ------------------------
 
 const objectCounter = (obj) => {
+    // write your code here
 
-    let count = obj.reduce((previousValue, currentValue, currentIndex) => {
+    let x = obj.reduce((x, y, z) => {
 
-      return currentIndex++;
+      return z++;
     });
-    return count + 1;
+    return x + 1;
   };
 
 // 2) ---------------------
@@ -60,9 +61,10 @@ const objectCounter = (obj) => {
 // ------------------------
 
 const stringReverse = (str) => {
-   
-    let newString = str.split(' ')
-       newString.reduce(function (previous, current) {
+       // write your code here
+
+    let x = str.split(' ')
+       x.reduce(function (previous, current) {
         return str = `${current} ${previous}` ;
       });
       return str
@@ -111,19 +113,16 @@ const stringReverse = (str) => {
 // ------------------------
 
 const statistics = (obj) => {
+    // write your code here
 
-    let count = obj.reduce(function (previous,current) { 
-      if (current.votes_To in previous){
-        previous[current.votes_To]++
+    let x = obj.reduce(function (y,z) { 
+      if (z.votes_To in y){
+        y[z.votes_To]++
       }  
-  
-        else {previous[current.votes_To]=1;
+        else {y[z.votes_To]=1;
         }
-  
-       
-        return previous;},{})
-        
-        return count;
+        return y;},{})
+        return x;
       }
 
 

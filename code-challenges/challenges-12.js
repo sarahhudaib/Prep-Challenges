@@ -85,9 +85,9 @@ const oddFiltration = (arr) => {
 
 
 const cvsFiltration = (arr) => {
-    let hired = arr.filter((element) => element.yearsOfExperience > 4 && element.firstName != null && element.LastName != null);
-    return hired.map((element2) => {
-      return { fullName: `${element2.firstName} ${element2.LastName}`, tech: element2.tech };
+    let h = arr.filter((e) => e.yearsOfExperience > 4 && e.firstName != null && e.LastName != null);
+    return h.map((e2) => {
+      return { fullName: `${e2.firstName} ${e2.LastName}`, tech: e2.tech };
     });
 
        }
@@ -108,9 +108,9 @@ const cvsFiltration = (arr) => {
 // } 
 
 const vowelsFiltration = (arr) => {
-    return arr.filter((element) =>
-    element.indexOf('u') == -1 && element.indexOf('e') == -1 && element.indexOf('o') == -1 &&
-    element.indexOf('i') == -1 &&element.indexOf('a') == -1
+    return arr.filter((e) =>
+    e.indexOf('u') == -1 && e.indexOf('e') == -1 && e.indexOf('o') == -1 &&
+    e.indexOf('i') == -1 && e.indexOf('a') == -1
     );
 }
 
@@ -140,11 +140,10 @@ const vowelsFiltration = (arr) => {
 
 const skillComparison = (arr1, arr2) => {
 
-    
-    let speicalSkills = arr1.filter((element) => 
-    !arr2.includes(element)).concat(arr2.filter((element) => 
-    !arr1.includes(element)));
-    return speicalSkills
+    let x = arr1.filter((e) => 
+    !arr2.includes(e)).concat(arr2.filter((e) => 
+    !arr1.includes(e)));
+    return x
 
 }
 

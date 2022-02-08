@@ -125,8 +125,8 @@ function fullName(arr) {
 
 
 function gradesAvg(arr) {    
-    const average = arry => arry.reduce((a,b) => a + b,0) / arry.length;    
-    arr.map (element => element["avg"] = average(element.gradsList));    
+    const avg = arry => arry.reduce((a,b) => a + b,0) / arry.length;    
+    arr.map (element => element["avg"] = avg(element.gradsList));    
  return arr;    
 }
 
@@ -198,7 +198,9 @@ function gradesAvg(arr) {
 // -------------
 
 function studentsResult(arr) {
-    let newresult = gradesAvg(arr);     newresult.map(elment => (elment.avg >= 50 ? elment['result'] = 'Passed' : elment['result'] = "Failed"))     
-    return newresult;     // write your code here }
+     // write your code here 
+
+    let arr2 = gradesAvg(arr); arr2.map(e => (e.avg >= 50 ? e['result']='Passed': e['result']="Failed"))     
+    return arr2;    
 }
 module.exports = { square, fullName, gradesAvg, studentsResult };
