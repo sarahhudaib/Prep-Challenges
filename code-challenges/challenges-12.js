@@ -82,27 +82,15 @@ const oddFiltration = (arr) => {
 //     // write your code here
 // }
 // 
-function fullName(arr) {
-    // write your code here
-    let userFullnames = arr.map(function(element){
-        return `${element.firstName} ${element.lastName}`;
-    })
-   // console.log(userFullnames);
-    return userFullnames;
-}
+
 
 const cvsFiltration = (arr) => {
-    // let userFullnames = myArray.map(function(element){
-    //     return `${element.firstName} ${element.lastName}`;
-    // })
-    // var result = myArray.filter((x) => { return x.yearsOfExperience > 4 && x.tech=="JS"; });
-    // return userFullnames , result;
-   if((result = arr.filter(word => word.yearsOfExperience > 4))&& (word.tech=="JS")){
-let filter=fullName()+result;
-   }
-   return filter;
-}
+    let hired = arr.filter((element) => element.yearsOfExperience > 4 && element.firstName != null && element.LastName != null);
+    return hired.map((element2) => {
+      return { fullName: `${element2.firstName} ${element2.LastName}`, tech: element2.tech };
+    });
 
+       }
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -120,17 +108,12 @@ let filter=fullName()+result;
 // } 
 
 const vowelsFiltration = (arr) => {
-    // write your code here
-    let results = []
-       for (let i = 0; i < arr.length; i++) {
-           if ((arr[i].startsWith('a')) || (arr[i].startsWith('A')) || (arr[i].startsWith('e')) || (arr[i].startsWith('E')) || (arr[i].startsWith('i')) || (arr[i].startsWith('I')) || (arr[i].startsWith('o')) || (arr[i].startsWith('O')) || (arr[i].startsWith('u')) || (arr[i].startsWith('U'))) 
-           {
-    results.push(arr[i])
-  }
+    return arr.filter((element) =>
+    element.indexOf('u') == -1 && element.indexOf('e') == -1 && element.indexOf('o') == -1 &&
+    element.indexOf('i') == -1 &&element.indexOf('a') == -1
+    );
 }
 
-return results
-} 
 
 // -------------------------------------------------------------------------------------------------------
 
@@ -157,11 +140,11 @@ return results
 
 const skillComparison = (arr1, arr2) => {
 
-    // write your code here
-    let difference = arr1
-                 .filter(x => !arr2.includes(x))
-                 .concat(arr2.filter(x => !arr1.includes(x)));
-    return this.filter(x => !arr2.includes(x)); 
+    
+    let speicalSkills = arr1.filter((element) => 
+    !arr2.includes(element)).concat(arr2.filter((element) => 
+    !arr1.includes(element)));
+    return speicalSkills
 
 }
 
