@@ -38,14 +38,10 @@ const LastWord = (str) => {
 // ------------------------
 
 const LastWord_2 = (str) => {
+    let arr = str.split(' ');
+    let lastWord = arr[arr.length - 1];
+    return lastWord
     // write your code here
-    let lastSpace=str.lastIndexOf(' ')
-    if (lastSpace ==-1){
-return str
-    }else {
-return str.slice(lastSpace+1)
-
-    }
 }
 
 // 3) ---------------------
@@ -65,12 +61,7 @@ const replaceWords = (str) => {
     str=str.replace(/was/g,"were");     
     str=str.replace(/am/g,"are"); 
     return str
-    // var ourNewString = str
-    // .replace("I", "we")
-    // .replace("am", "are")
-    // .replace("was", "were");
-    // str.split(search).join(replacement);
-    //  return ourNewString
+    
 }
 
     
