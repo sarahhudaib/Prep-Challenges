@@ -39,11 +39,7 @@
 
 const objectCounter = (obj) => {
     // write your code here
-    var counter;
-    const count = obj.reduce((counter, obj) => {
-        if (obj.status === '0') counter += 1
-        return counter;
-      }, 0);
+
 }
 
 // 2) ---------------------
@@ -61,9 +57,12 @@ const objectCounter = (obj) => {
 
 const stringReverse = (str) => {
     // write your code here
-    return str.split("").reverse().join("");
+
     
-}
+    }
+    
+    
+
 
 // 3) ---------------------
 // 
@@ -103,15 +102,9 @@ const stringReverse = (str) => {
 //
 // ------------------------
 
-
-
 const statistics = (obj) => {
     // write your code here
-const counts = {};
-    arr.forEach((x) => {
-      counts[x] = (counts[x] || 0) + 1;
-    });
-return obj;
+
 }
 
 
