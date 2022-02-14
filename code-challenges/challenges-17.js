@@ -15,31 +15,22 @@
 //
 
 const recursionPattern = (int1, int2) => {
-    {
+    // write your code here
+    const a = [int1];
+    let test = "zero";
+    do {
+        test === "zero" ? (
+            a.push(a[a.length - 1] - int2)
+        ) : (
+            a.push(a[a.length - 1] + int2)
+        );
 
-        document.write(int2 + " ");
+        a[a.length - 1] < 0 ? test = "add" : "";
+    } while (a[a.length - 1] < int1)
 
-        if (flag == false && int1 == int2)
-            return;
+    return a;
 
-        if (flag)
-        {
-
-            if (int2 - 5 > 0)
-                printPattern(int1, int2 - 5, true);
-                
-            else
-                printPattern(int1, int2 - 5, false);
-        }
-
-        else
-            printPattern(int1, int2 + 5, false);
-    
-     
-    }
 }
-
-
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -57,10 +48,9 @@ const recursionPattern = (int1, int2) => {
 // 
 
 function filterLinks (str) {
-
-     return new URL(str.split('"')[1]).hostname;
+    // write your code here
+    return new URL(str.split('"')[1]).hostname;
 }
-
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -83,7 +73,7 @@ const isPalindrome = (str) => {
     const two = one.split("").reverse().join("");
 
     return one === two;
-    }
+}
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
