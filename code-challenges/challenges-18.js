@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 // -------------------------------------------------------------------------------------------------------
 // Challenge 01:
@@ -15,13 +15,12 @@
 //
 
 const wordLength = (str) => {
-    // write your code here
-    const str1 = str.split(" ");
-    const str2= str1[parseInt(str1.length / 2)].length;
-    return str2
-}
+  // write your code here
+  const str1 = str.split(" ");
+  const str2 = str1[parseInt(str1.length / 2)].length;
+  return str2;
+};
 // -------------------------------------------------------------------------------------------------------
-
 
 // -------------------------------------------------------------------------------------------------------
 // Challenge 02:
@@ -43,8 +42,25 @@ const wordLength = (str) => {
 // Output: false
 
 const wordLetters = (str1, str2) => {
-    // write your code here
-}
+  // write your code here
+  let result = true;
+
+  const str11 = str1.split("").sort();
+  const str22 = str2.split("").sort();
+
+  if (str11.length === str22.length) {
+    str11.forEach((letter, i) => {
+      if (letter === str22[i]) {
+        ("");
+      } else {
+        result = false;
+      }
+    });
+  } else {
+    result = false;
+  }
+  return result;
+};
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -66,10 +82,15 @@ const wordLetters = (str1, str2) => {
 // Output: 4
 //
 
-function targetIndex (arr, int)  {
-    // write your code here
-   const arr3= arr.indexOf(int)>= 0 ? arr.indexOf(int):[...arr, int].sort().indexOf(int);
-   return arr3;
+function targetIndex(arr, int) {
+  // write your code here
+  
+   if (arr.indexOf(int) >= 0){
+   return arr.indexOf(int)
+   } else {
+    return [...arr, int].sort().indexOf(int);
+   }
+
 }
 // -------------------------------------------------------------------------------------------------------
 
